@@ -10,8 +10,6 @@ export class BaseResponse {
     public data?: any,
   ) {}
 
-  // TODO: Promisify
-  // TODO: Figure out how to integrate encode/decrypt data between client and server
   static encodeData(data: any, statusCode: number = 200, message?: any, error?: any) {
     const algorithm = 'aes-256-cbc';
     const key = crypto.randomBytes(32);
