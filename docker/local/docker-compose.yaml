@@ -1,0 +1,11 @@
+services:
+  nestjs-authentication-starterkit:
+    build:
+      context: ../../
+      dockerfile: docker/local/Dockerfile
+      target: deploy
+    image: nestjs-authentication-starterkit:latest
+    env_file:
+      - ../../.env.local.sample
+    ports:
+      - "3010:3010"
